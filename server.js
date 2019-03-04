@@ -1,4 +1,8 @@
-const {register, useStream, useTrigger, useEvent, useCondition, useAction} = require('bara');
+const bara = require('bara');
+
+console.log(bara);
+
+const {register, useStream, useTrigger, useEvent, useCondition, useAction} = bara
  
 const ON_TIME_ESLAPSED = 'ON_TIME_ESLAPSED';
  
@@ -17,6 +21,7 @@ const timeElapsedStream = () => {
     },
   }
 }
+
  
 const everyTwoSecondsTrigger = {
   name: 'Console Every Two Seconds',
@@ -26,20 +31,22 @@ const everyTwoSecondsTrigger = {
     console.log(`Console every two seconds: ${payload}`);
   }),
 };
+
+console.log('Run');
  
-const everyXSecondsTrigger = {
-  name: 'Console Every 20 Seconds',
-  event: useEvent(ON_TIME_ESLAPSED),
-  condition: useCondition(EVERY_X_SECOND(5)),
-  action: useAction(({payload}) => {
-    console.log(`Console every 5 seconds: ${payload}`);
-  }),
-};
+// const everyXSecondsTrigger = {
+//   name: 'Console Every 20 Seconds',
+//   event: useEvent(ON_TIME_ESLAPSED),
+//   condition: useCondition(EVERY_X_SECOND(5)),
+//   action: useAction(({payload}) => {
+//     console.log(`Console every 5 seconds: ${payload}`);
+//   }),
+// };
  
-const tikTokApp = () => {
-    useStream(timeElapsedStream);
-    useTrigger(everyTwoSecondsTrigger);
-    useTrigger(everyXSecondsTrigger)
-}
+// const tikTokApp = () => {
+//     useStream(timeElapsedStream);
+//     useTrigger(everyTwoSecondsTrigger);
+//     useTrigger(everyXSecondsTrigger)
+// }
  
-register(tikTokApp);
+// register(tikTokApp);
