@@ -29,4 +29,4 @@ registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
-  bara: ^1.1.9
+  bara: 1.1.9

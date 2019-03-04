@@ -3,7 +3,7 @@ const {register, useStream, useTrigger, useEvent, useCondition, useAction} = req
 const ON_TIME_ESLAPSED = 'ON_TIME_ESLAPSED';
  
 const EVERY_X_SECOND = (x) => (triggeringEvent) => triggeringEvent.payload % x === 0;
-const ONLY_EVEN_SECOND = (triggeringEvent) => triggeringEvent.payload % 2 === 0;
+const ONLY_EVEN_SECOND = EVERY_X_SECOND(2);
 
 const timeElapsedStream = {
     name: 'time-elapsed-stream',
@@ -26,7 +26,7 @@ const tikTrigger = {
 };
 
 const tokTrigger = {
-  name: 'Tok Every 20 Seconds',
+  name: 'Tok Every 5 Seconds',
   event: useEvent(ON_TIME_ESLAPSED),
   condition: useCondition(EVERY_X_SECOND(5)),
   action: useAction(({payload}) => {
