@@ -8,7 +8,7 @@ const ONLY_EVEN_SECOND = (triggeringEvent) => triggeringEvent.payload % 2 === 0;
 const timeElapsedStream = () => {
   return {
     name: 'Tik Tok',
-    eventTypes: ['ON_TIME_ESLAPSED'],
+    eventTypes: [ON_TIME_ESLAPSED],
     setup: ({emit}) => {
       let elapsed = 0;
       const timer = setInterval(() => {
@@ -39,6 +39,7 @@ const everyXSecondsTrigger = {
 const tikTokApp = () => {
     useStream(timeElapsedStream);
     console.log('Meo');
+    useTrigger(everyXSecondsTrigger);
 }
  
 register(tikTokApp);
