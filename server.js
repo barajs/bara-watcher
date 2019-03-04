@@ -1,7 +1,5 @@
 const bara = require('bara');
 
-console.log(bara);
-
 const {register, useStream, useTrigger, useEvent, useCondition, useAction} = bara
  
 const ON_TIME_ESLAPSED = 'ON_TIME_ESLAPSED';

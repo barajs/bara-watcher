@@ -10,7 +10,7 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "bara": "1.1.3"
+    "bara": "1.1.4"
   },
   "engines": {
     "node": "8.x"

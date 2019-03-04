@@ -1,5 +1,5 @@
 dependencies:
-  bara: 1.1.3
+  bara: 1.1.4
 packages:
   /@bara/core/1.1.1:
     dependencies:
@@ -7,12 +7,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-VfG1Vv032Q63mFjnq4zngs6BnKTvBzQoSdLysG3/gibsiLlkNzr+2mI0u1Rka7oGSC95LNEeD5Z68xH6HYveeA==
-  /bara/1.1.3:
+  /bara/1.1.4:
     dependencies:
       '@bara/core': 1.1.1
     dev: false
     resolution:
-      integrity: sha512-5kArS2wDg47Lm8p4/+QZEMBWqEnd0728cfZc6eu0gocJbeC1WfrVQ0KsuxjDVGAhom6zXufPbSbf4PDRff9Wog==
+      integrity: sha512-MxwF/niG/6SipET3iVTQxVNDyIkyxRqMHh1hSwPj08oH3UH1UdbLrXZEsNj8PojoW82ZSpMCNfK+gE7Dip4ahw==
   /symbol-observable/1.2.0:
     dev: false
     engines:
@@ -29,4 +29,4 @@ registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
-  bara: 1.1.3
+  bara: 1.1.4
