@@ -10,10 +10,10 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "bara": "^1.1.6"
+    "bara": "^1.1.7"
   },
   "engines": {
-    "node": "8.x"
+    "node": "11.x"
   },
   "repository": {
     "url": "https://glitch.com/edit/#!/hello-express"
