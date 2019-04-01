@@ -7,7 +7,7 @@ const fileTrigger = {
   name: 'File TXT Trigger',
   event: useEvent(ON_FILE_ADDED),
   action: useAction((data) => {
-    console.log(data);
+    console.log('File added: ', data);
   })
 }
 
