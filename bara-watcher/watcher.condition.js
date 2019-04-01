@@ -1,3 +1,4 @@
+const {useCondition} = require('bara');
 const {parse} = require('path');
 const {ON_FILE_ADDED, ON_FILE_DELETED} = require('./watcher.event');
 
@@ -17,4 +18,8 @@ const mediaFileDeleted = type => eventData => {
   return cond;
 };
 
-module.exports = {fileTypeChanged, mediaFileDeleted};
+const useMediaFilterCondition = type => {
+  return useCondition(fileTypeChanged(type));
+};
+
+module.exports = {useMediaFilterCondition};

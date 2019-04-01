@@ -7,20 +7,16 @@ const {
   useAction,
   useTrigger,
 } = require('bara');
-const {useBaraWatcher} = require('./bara-watcher');
+const {useBaraWatcher, useMediaFilterCondition} = require('./bara-watcher');
 const {
   ON_FILE_ADDED,
   ON_FILE_DELETED,
 } = require('./bara-watcher/watcher.event');
-const {
-  fileTypeChanged,
-  mediaFileDeleted,
-} = require('./bara-watcher/watcher.condition');
 
 const fileAddTrigger = {
   name: 'File Add Trigger',
   event: useEvent(ON_FILE_ADDED),
-  condition: useCondition(fileTypeChanged('mp4')),
+  condition: useMediaFilterCondition('mp4'),
   action: useAction(data => {
     console.log('File added: ', data);
   }),
@@ -29,14 +25,14 @@ const fileAddTrigger = {
 const fileDeleteTrigger = {
   name: 'File Delete Trigger',
   event: useEvent(ON_FILE_DELETED),
-  condition: useCondition(mediaFileDeleted('mp3')),
+  condition: useMediaFilterCondition('mp3'),
   action: useAction(data => {
     console.log('File deleted: ', data);
   }),
 };
 
 function fsWatcher() {
-  useBaraWatcher({watchDir: join(__dirname, '.data')})
+  useBaraWatcher({watchDir: join(__dirname, '.data')});
   useTrigger(fileAddTrigger);
   useTrigger(fileDeleteTrigger);
   console.log(`Registered success!`);
