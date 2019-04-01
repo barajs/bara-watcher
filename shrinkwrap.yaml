@@ -1,14 +1,14 @@
 dependencies:
-  bara: 1.1.9
+  bara: 1.2.0
   chokidar: 2.1.5
   typescript: 3.4.1
 packages:
-  /@bara/core/1.1.9:
+  /@bara/core/1.2.0:
     dependencies:
       xstream: 11.10.0
     dev: false
     resolution:
-      integrity: sha512-A7pbIR9g/nT3xOIKUAKg7u0Y4OMtZY+QrEhJy5XKx9Var0+B+iWZIWy4xDNAS4zVMO0Qy1tUcbZVclhA7yX/jQ==
+      integrity: sha512-PeMg5RBT7Fl2/4G4OfyBAy7DXXhFO+NN5sArBE2LfPbYXrccho3FkvsuSOLSIjGa3cTEQ0BzMiH3lu84QY85/Q==
   /anymatch/2.0.0:
     dependencies:
       micromatch: 3.1.10
@@ -57,12 +57,12 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
-  /bara/1.1.9:
+  /bara/1.2.0:
     dependencies:
-      '@bara/core': 1.1.9
+      '@bara/core': 1.2.0
     dev: false
     resolution:
-      integrity: sha512-9qvFLHMt23/TPplqfFaIuAJjmdT7ZOoOVeldoLUWhw+CI7rxZQYJ69jNfh7tZE+2CZ6ZZC0CQCVd6YCeANs43A==
+      integrity: sha512-uov8uG+bf97DDOYHAk1McT6LLSAzWqLRkWIbovz+/USNwBP3U6o+jqnoIatZrXsO5FFuyxmYtTEOj0ZG56OZEA==
   /base/0.11.2:
     dependencies:
       cache-base: 1.0.1
@@ -904,6 +904,6 @@ registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
-  bara: 1.1.9
+  bara: 1.2.0
   chokidar: ^2.1.5
   typescript: ^3.2.2

@@ -8,7 +8,7 @@
     "build": "tsb -b"
   },
   "dependencies": {
-    "bara": "1.1.9",
+    "bara": "1.2.0",
     "typescript": "^3.2.2",
     "chokidar": "^2.1.5"
   },

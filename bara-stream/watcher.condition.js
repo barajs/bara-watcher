@@ -1,18 +1,20 @@
-const {parse} = require('path')
+const {parse} = require('path');
 const {ON_FILE_ADDED, ON_FILE_DELETED} = require('./watcher.event');
 
-const fileTypeChanged = (type) => (eventData) => {
+const fileTypeChanged = type => eventData => {
   const {payload: path, eventType} = eventData;
-  console.log('Condition fileTypeChanged: ', eventData);
   const pathData = parse(path);
-  return eventType === ON_FILE_ADDED && pathData.ext.contains(type);
-}
+  const cond = eventType === ON_FILE_ADDED && pathData.ext.indexOf(type) > -1;
+  console.log('Condition fileTypeChanged: ', eventData, cond);
+  return cond;
+};
 
-const mediaFileDeleted = (type) => (eventData) => {
+const mediaFileDeleted = type => eventData => {
   const {payload: path, eventType} = eventData;
-  console.log('Condition mediaFileDeleted: ', eventData);
   const pathData = parse(path);
-  return eventType === ON_FILE_DELETED && pathData.ext.contains(type);
-}
+  const cond = eventType === ON_FILE_DELETED && pathData.ext.indexOf(type) > -1;
+  console.log('Condition mediaFileDeleted: ', eventData, cond);
+  return cond;
+};
 
-module.exports = {fileTypeChanged, mediaFileDeleted}
+module.exports = {fileTypeChanged, mediaFileDeleted};
