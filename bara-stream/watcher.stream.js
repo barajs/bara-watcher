@@ -7,15 +7,17 @@ const watcherStream = () => {
     name: 'Bara Watcher',
     eventTypes: [ON_FILE_ADDED, ON_FILE_DELETED],
     setup: ({emit}) => {
-      const watchDir = '/app/.data'; //path.resolve(__dirname, '.data');
-      console.log(watchDir);
+      const watchDir = '/app/.data';
+      
       const watcher = chokidar.watch(watchDir);
       
       watcher.on('add', (path) => {
+        debugger;
         emit(ON_FILE_ADDED, path);
       });
       
       watcher.on('unlink', (path) => {
+        debugger;
         emit(ON_FILE_DELETED, path);
       });
     }

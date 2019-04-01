@@ -1,7 +1,7 @@
 const {register, useStream, useEvent, useCondition, useAction, useTrigger} = require('bara');
 const {watcherStream} = require('./bara-stream/watcher.stream');
 const {ON_FILE_ADDED, ON_FILE_DELETED} = require('./bara-stream/watcher.event');
-const {fileTypeChanged} = require('./bara-stream/watcher.condition');
+const {fileTypeChanged, mediaFileDeleted} = require('./bara-stream/watcher.condition');
 
 const fileAddTrigger = {
   name: 'File Add Trigger',
@@ -15,6 +15,7 @@ const fileAddTrigger = {
 const fileDeleteTrigger = {
   name: 'File Delete Trigger',
   event: useEvent(ON_FILE_DELETED),
+  condition: useCondition(mediaFileDeleted('mp3')),
   action: useAction((data) => {
     console.log('File deleted: ', data);
   })
