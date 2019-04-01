@@ -5,6 +5,7 @@ const ON_TIME_ESLAPSED = 'ON_TIME_ESLAPSED';
 const EVERY_X_SECOND = (x) => (triggeringEvent) => triggeringEvent.payload % x === 0;
 const ONLY_EVEN_SECOND = EVERY_X_SECOND(2);
 
+// Setup
 const timeElapsedStream = {
     name: 'time-elapsed-stream',
     eventTypes: [ON_TIME_ESLAPSED],

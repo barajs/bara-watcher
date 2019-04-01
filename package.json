@@ -1,16 +1,16 @@
 {
-  "//1": "describes your app and its dependencies",
-  "//2": "https://docs.npmjs.com/files/package.json",
-  "//3": "updating this file will download and update your packages",
-  "name": "hello-express",
+  "name": "bara-watcher",
   "version": "0.0.1",
   "description": "A simple Node app built on Express, instantly up and running.",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "build": "tsb -b"
   },
   "dependencies": {
-    "bara": "1.1.9"
+    "bara": "1.1.9",
+    "typescript": "^3.2.2",
+    "chokidar": "^2.1.5"
   },
   "engines": {
     "node": "11.x"
